@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .container {
+    margin-top: 100px;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Babeee! Will You Be My Valentine?</h1>
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+
+  <script>
+    document.getElementById("yesBtn").addEventListener("click", function() {
+      var choice = prompt("Great! What would you like to do? Enter 'Make love' for making love with me or 'dinner' for A dinner with me");
+      if (choice === "Make love") {
+        var locationChoice = prompt("Where would you like to make love? Enter 'home' for My home or 'hotel' for A hotel");
+        if (locationChoice === "home") {
+          alert("Sure! Let's make it a memorable night at my home. Happy Valentine's Day!");
+        } else if (locationChoice === "hotel") {
+          alert("Sounds luxurious! Let's book a hotel room for an intimate time. Happy Valentine's Day!");
+        } else {
+          alert("Invalid location choice. Please select either 'home' or 'hotel'.");
+        }
+      } else if (choice === "dinner") {
+        var dinnerChoice = prompt("What would you like to eat? Enter 'manginasal' for Mang Inasal, 'jollibee' for Jollibee, or 'streetfoods' for Street Foods");
+        if (dinnerChoice === "manginasal") {
+          alert("Delicious choice! Let's head to Mang Inasal for a tasty meal!");
+        } else if (dinnerChoice === "jollibee") {
+          alert("Yum! Jollibee it is! Let's enjoy a meal at Jollibee!");
+        } else if (dinnerChoice === "streetfoods") {
+          alert("Exciting! Let's explore the streets and indulge in some delicious street foods!");
+        } else {
+          alert("Invalid dinner choice. Please select either 'manginasal', 'jollibee', or 'streetfoods'.");
+        }
+      } else {
+        alert("Invalid choice. Please select either 'Make love' or 'dinner'.");
+      }
+    });
+
+    document.getElementById("noBtn").addEventListener("click", function() {
+      alert("That's okay, maybe next time!");
+    });
+  </script>
+</body>
+</html>
